@@ -1,0 +1,6 @@
+{
+  "name": "Utsav Mega Sale - Indian Festival Affiliate Shopping",
+  "description": "Discover the biggest Indian festival mega sale deals for Diwali, Durga Puja, and Chhath Puja with verified discounts across Flipkart, Myntra, and Meesho.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

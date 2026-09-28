@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Cinzel', serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #1e293b;
+    background-color: #fcfbfa;
+  }
+
+  h1, h2, h3, .font-festive {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.9; transform: scale(1) translateY(0); }
+  50% { opacity: 1; transform: scale(1.08) translateY(-1px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(2deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.4)); }
+  50% { filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.7)); }
+}
+
+.diya-flame {
+  animation: flicker 1.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.floating-element {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.glow-amber {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diya-flame,
+  .floating-element,
+  .glow-amber {
+    animation: none !important;
+  }
+}
